@@ -115,7 +115,7 @@ export default function VisitorManagement() {
         </div>
         <Link
           href="/visitor-management/pre-register"
-          className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+          className="inline-flex items-center rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
         >
           <UserPlusIcon className="mr-2 h-5 w-5" />
           Pre-register Visitor
@@ -125,7 +125,7 @@ export default function VisitorManagement() {
       {/* Stats */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { label: 'Total today', value: 12, tone: 'text-indigo-700 bg-indigo-50' },
+          { label: 'Total today', value: 12, tone: 'text-sonata-700 bg-sonata-50' },
           { label: 'Checked in', value: 8, tone: 'text-emerald-700 bg-emerald-50' },
           { label: 'Pending approval', value: 3, tone: 'text-amber-700 bg-amber-50' },
           { label: 'Checked out', value: 4, tone: 'text-slate-700 bg-slate-100' },
@@ -148,7 +148,7 @@ export default function VisitorManagement() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id as 'today' | 'upcoming')}
               className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                activeTab === tab.id ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700'
+                activeTab === tab.id ? 'bg-sonata-600 text-white' : 'bg-slate-100 text-slate-700'
               }`}
             >
               {tab.label}
@@ -191,7 +191,7 @@ export default function VisitorManagement() {
                 {visit.qrCode && (
                   <Link
                     href={`/visitor-management/${visit.id}/qr`}
-                    className="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-700 text-sm font-semibold"
+                    className="inline-flex items-center gap-1 text-sonata-600 hover:text-sonata-700 text-sm font-semibold"
                   >
                     <QrCodeIcon className="h-4 w-4" />
                     View QR

@@ -73,7 +73,7 @@ export default function MeetingRooms() {
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
               min={new Date().toISOString().split('T')[0]}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
           <div>
@@ -81,7 +81,7 @@ export default function MeetingRooms() {
             <select
               value={selectedTime}
               onChange={(e) => setSelectedTime(e.target.value)}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             >
               <option value="">Select duration</option>
               <option value="30">30 minutes</option>
@@ -132,7 +132,7 @@ export default function MeetingRooms() {
                     disabled={!slot.available}
                     className={`rounded-md px-3 py-2 text-sm font-medium ${
                       slot.available
-                        ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+                        ? 'bg-sonata-50 text-sonata-700 hover:bg-sonata-100'
                         : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                     }`}
                   >

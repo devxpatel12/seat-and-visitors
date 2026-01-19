@@ -15,7 +15,7 @@ export default function Dashboard() {
   const { user, hasRole } = useAuth()
 
   const stats = [
-    { name: 'Available Seats', value: '127', icon: MapPinIcon, accent: 'bg-indigo-50 text-indigo-700' },
+    { name: 'Available Seats', value: '127', icon: MapPinIcon, accent: 'bg-sonata-50 text-sonata-700' },
     { name: 'Visitors Today', value: '12', icon: UserGroupIcon, accent: 'bg-emerald-50 text-emerald-700' },
     { name: 'Pending Approvals', value: hasRole('manager') || hasRole('facilities') ? '5' : '0', icon: ClockIcon, accent: 'bg-amber-50 text-amber-700' },
     { name: 'Rooms Free Now', value: '7', icon: BuildingOfficeIcon, accent: 'bg-sky-50 text-sky-700' },
@@ -53,9 +53,9 @@ export default function Dashboard() {
             <Link
               key={action.label}
               href={action.href}
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:border-indigo-200 hover:bg-indigo-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:border-sonata-200 hover:bg-sonata-50"
             >
-              <action.icon className="h-5 w-5 text-indigo-600" />
+              <action.icon className="h-5 w-5 text-sonata-600" />
               {action.label}
             </Link>
           ))}
@@ -85,11 +85,11 @@ export default function Dashboard() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-sm font-semibold text-slate-800">Recent Bookings</h4>
-                <Link href="/my-bookings" className="text-xs font-semibold text-indigo-600">View all</Link>
+                <Link href="/my-bookings" className="text-xs font-semibold text-sonata-600">View all</Link>
               </div>
               <div className="space-y-3">
                 {recentBookings.map((booking) => (
-                  <div key={booking.id} className="rounded-lg border border-slate-200 px-3 py-3 hover:border-indigo-200">
+                  <div key={booking.id} className="rounded-lg border border-slate-200 px-3 py-3 hover:border-sonata-200">
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-sm font-semibold text-slate-900">{booking.seat}</p>
@@ -113,11 +113,11 @@ export default function Dashboard() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-sm font-semibold text-slate-800">Visitors</h4>
-                <Link href="/visitor-management" className="text-xs font-semibold text-indigo-600">Manage</Link>
+                <Link href="/visitor-management" className="text-xs font-semibold text-sonata-600">Manage</Link>
               </div>
               <div className="space-y-3">
                 {recentVisits.map((visit) => (
-                  <div key={visit.id} className="rounded-lg border border-slate-200 px-3 py-3 hover:border-indigo-200">
+                  <div key={visit.id} className="rounded-lg border border-slate-200 px-3 py-3 hover:border-sonata-200">
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-sm font-semibold text-slate-900">{visit.visitor}</p>
@@ -156,12 +156,12 @@ export default function Dashboard() {
                   <p className="text-sm font-semibold text-slate-900">{item.label}</p>
                   <p className="text-xs text-slate-500">Pending approvals</p>
                 </div>
-                <span className="pill bg-indigo-50 text-indigo-700">{item.count}</span>
+                <span className="pill bg-sonata-50 text-sonata-700">{item.count}</span>
               </div>
             ))}
             <Link
               href="/approvals"
-              className="block text-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+              className="block text-center rounded-lg bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
             >
               Review approvals
             </Link>

@@ -9,18 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+        sonata: {
+          50: '#fee2e2',
+          100: '#fecaca',
+          200: '#fca5a5',
+          300: '#f87171',
+          400: '#ef4444',
+          500: '#dc2626',
+          600: '#c8102e', // Sonata Red
+          700: '#b91c1c',
+          800: '#991b1b',
+          900: '#7f1d1d',
         },
+        primary: {
+          50: '#fee2e2',
+          100: '#fecaca',
+          200: '#fca5a5',
+          300: '#f87171',
+          400: '#ef4444',
+          500: '#dc2626',
+          600: '#c8102e', // Sonata Red
+          700: '#b91c1c',
+          800: '#991b1b',
+          900: '#7f1d1d',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

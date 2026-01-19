@@ -7,8 +7,8 @@
   --card: #ffffff;
   --text: #0f172a;
   --muted: #475569;
-  --primary: #2563eb;
-  --primary-soft: #e8eeff;
+  --primary: #c8102e; /* Sonata Red */
+  --primary-soft: #fee2e2;
   --border: #e2e8f0;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  background: #dbeafe;
+  background: #fee2e2;
   color: #0f172a;
 }
 

@@ -48,7 +48,7 @@ export default function Settings() {
       {/* Security & Compliance */}
       <div className="rounded-lg bg-white p-6 shadow">
         <div className="flex items-center mb-4">
-          <ShieldCheckIcon className="h-6 w-6 text-indigo-600 mr-2" />
+          <ShieldCheckIcon className="h-6 w-6 text-sonata-600 mr-2" />
           <h2 className="text-lg font-semibold text-gray-900">Security & Compliance (India DPDP Act, 2023)</h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function Settings() {
             <select
               value={settings.dataResidency}
               onChange={(e) => setSettings({ ...settings, dataResidency: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             >
               <option value="india">India Region (Preferred)</option>
               <option value="other">Other Region</option>
@@ -80,7 +80,7 @@ export default function Settings() {
                 onChange={(e) => setSettings({ ...settings, encryptionAtRest: e.target.checked })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
             </label>
           </div>
 
@@ -96,7 +96,7 @@ export default function Settings() {
                 onChange={(e) => setSettings({ ...settings, encryptionInTransit: e.target.checked })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
             </label>
           </div>
 
@@ -112,7 +112,7 @@ export default function Settings() {
                 onChange={(e) => setSettings({ ...settings, auditLogs: e.target.checked })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
             </label>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function Settings() {
       {/* Data Retention Policies */}
       <div className="rounded-lg bg-white p-6 shadow">
         <div className="flex items-center mb-4">
-          <LockClosedIcon className="h-6 w-6 text-indigo-600 mr-2" />
+          <LockClosedIcon className="h-6 w-6 text-sonata-600 mr-2" />
           <h2 className="text-lg font-semibold text-gray-900">Data Retention Policies</h2>
         </div>
 
@@ -135,7 +135,7 @@ export default function Settings() {
                 ...settings,
                 dataRetention: { ...settings.dataRetention, bookings: parseInt(e.target.value) }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
 
@@ -148,7 +148,7 @@ export default function Settings() {
                 ...settings,
                 dataRetention: { ...settings.dataRetention, visits: parseInt(e.target.value) }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
 
@@ -161,7 +161,7 @@ export default function Settings() {
                 ...settings,
                 dataRetention: { ...settings.dataRetention, auditLogs: parseInt(e.target.value) }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
 
@@ -174,7 +174,7 @@ export default function Settings() {
                 ...settings,
                 dataRetention: { ...settings.dataRetention, inactiveUsers: parseInt(e.target.value) }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function Settings() {
       {/* Integrations */}
       <div className="rounded-lg bg-white p-6 shadow">
         <div className="flex items-center mb-4">
-          <LockClosedIcon className="h-6 w-6 text-indigo-600 mr-2" />
+          <LockClosedIcon className="h-6 w-6 text-sonata-600 mr-2" />
           <h2 className="text-lg font-semibold text-gray-900">SSO Integration</h2>
         </div>
 
@@ -203,7 +203,7 @@ export default function Settings() {
                 })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
             </label>
           </div>
 
@@ -215,7 +215,7 @@ export default function Settings() {
                 ...settings,
                 sso: { ...settings.sso, provider: e.target.value }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             >
               <option value="azure-ad">Azure AD</option>
               <option value="google-workspace">Google Workspace</option>
@@ -233,7 +233,7 @@ export default function Settings() {
                 ...settings,
                 sso: { ...settings.sso, clientId: e.target.value }
               })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
             />
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function Settings() {
       {/* Email & SMS Gateways */}
       <div className="rounded-lg bg-white p-6 shadow">
         <div className="flex items-center mb-4">
-          <BellIcon className="h-6 w-6 text-indigo-600 mr-2" />
+          <BellIcon className="h-6 w-6 text-sonata-600 mr-2" />
           <h2 className="text-lg font-semibold text-gray-900">Email & SMS Gateways (India)</h2>
         </div>
 
@@ -264,7 +264,7 @@ export default function Settings() {
                     })}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
                 </label>
               </div>
               <div>
@@ -275,7 +275,7 @@ export default function Settings() {
                     ...settings,
                     emailGateway: { ...settings.emailGateway, provider: e.target.value }
                   })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
                 >
                   <option value="sendgrid">SendGrid</option>
                   <option value="ses">AWS SES</option>
@@ -291,7 +291,7 @@ export default function Settings() {
                     ...settings,
                     emailGateway: { ...settings.emailGateway, apiKey: e.target.value }
                   })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function Settings() {
                     })}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sonata-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sonata-600"></div>
                 </label>
               </div>
               <div>
@@ -325,7 +325,7 @@ export default function Settings() {
                     ...settings,
                     smsGateway: { ...settings.smsGateway, provider: e.target.value }
                   })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
                 >
                   <option value="twilio">Twilio</option>
                   <option value="aws-sns">AWS SNS</option>
@@ -341,7 +341,7 @@ export default function Settings() {
                     ...settings,
                     smsGateway: { ...settings.smsGateway, apiKey: e.target.value }
                   })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -352,7 +352,7 @@ export default function Settings() {
       <div className="flex justify-end">
         <button
           onClick={handleSave}
-          className="rounded-md bg-indigo-600 px-6 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+          className="rounded-md bg-sonata-600 px-6 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
         >
           Save All Settings
         </button>

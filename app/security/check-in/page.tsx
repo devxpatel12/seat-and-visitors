@@ -103,7 +103,7 @@ export default function SecurityCheckIn() {
               onClick={() => setCheckInMethod('qr')}
               className={`flex-1 rounded-md px-4 py-3 text-sm font-medium ${
                 checkInMethod === 'qr'
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-sonata-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -114,7 +114,7 @@ export default function SecurityCheckIn() {
               onClick={() => setCheckInMethod('otp')}
               className={`flex-1 rounded-md px-4 py-3 text-sm font-medium ${
                 checkInMethod === 'otp'
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-sonata-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -134,7 +134,7 @@ export default function SecurityCheckIn() {
               </div>
               <button
                 onClick={() => handleQRScan()}
-                className="w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+                className="w-full rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
               >
                 Simulate QR Scan
               </button>
@@ -149,12 +149,12 @@ export default function SecurityCheckIn() {
                   onChange={(e) => setOtp(e.target.value)}
                   placeholder="Enter 6-digit OTP"
                   maxLength={6}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
                 />
               </div>
               <button
                 onClick={handleOTPSubmit}
-                className="w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+                className="w-full rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
               >
                 Validate OTP
               </button>

@@ -53,7 +53,7 @@ export default function SeatConfiguration() {
         </div>
         <button
           onClick={handleAddLocation}
-          className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+          className="inline-flex items-center rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
         >
           <PlusIcon className="mr-2 h-5 w-5" />
           Add Location
@@ -69,7 +69,7 @@ export default function SeatConfiguration() {
             const loc = locations.find(l => l.id === e.target.value)
             if (loc) setSelectedLocation(loc)
           }}
-          className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500 sm:text-sm"
         >
           {locations.map((loc) => (
             <option key={loc.id} value={loc.id}>{loc.name}</option>
@@ -89,7 +89,7 @@ export default function SeatConfiguration() {
               <div className="flex items-center mb-4">
                 <BuildingOfficeIcon className="h-6 w-6 text-gray-400 mr-2" />
                 <h3 className="text-lg font-semibold text-gray-900">{building.name}</h3>
-                <button className="ml-4 text-sm text-indigo-600 hover:text-indigo-500">
+                <button className="ml-4 text-sm text-sonata-600 hover:text-sonata-500">
                   Add Floor
                 </button>
               </div>
@@ -99,7 +99,7 @@ export default function SeatConfiguration() {
                   <div className="flex items-center mb-2">
                     <MapPinIcon className="h-5 w-5 text-gray-400 mr-2" />
                     <h4 className="text-md font-medium text-gray-800">{floor.name}</h4>
-                    <button className="ml-4 text-sm text-indigo-600 hover:text-indigo-500">
+                    <button className="ml-4 text-sm text-sonata-600 hover:text-sonata-500">
                       Add Zone
                     </button>
                   </div>
@@ -121,7 +121,7 @@ export default function SeatConfiguration() {
                           <span className="ml-2 text-sm text-gray-500">{zone.seats} seats</span>
                         </div>
                         <div className="flex space-x-2">
-                          <button className="text-sm text-indigo-600 hover:text-indigo-500">
+                          <button className="text-sm text-sonata-600 hover:text-sonata-500">
                             Configure Seats
                           </button>
                           <button className="text-sm text-gray-600 hover:text-gray-500">
@@ -187,21 +187,21 @@ export default function SeatConfiguration() {
               <h3 className="text-sm font-medium text-gray-900">Role-based Rules</h3>
               <p className="text-xs text-gray-500">Configure booking rules by employee role</p>
             </div>
-            <button className="text-sm text-indigo-600 hover:text-indigo-500">Configure</button>
+            <button className="text-sm text-sonata-600 hover:text-sonata-500">Configure</button>
           </div>
           <div className="flex items-center justify-between rounded-md border border-gray-200 p-4">
             <div>
               <h3 className="text-sm font-medium text-gray-900">Department-based Rules</h3>
               <p className="text-xs text-gray-500">Set booking rules by department</p>
             </div>
-            <button className="text-sm text-indigo-600 hover:text-indigo-500">Configure</button>
+            <button className="text-sm text-sonata-600 hover:text-sonata-500">Configure</button>
           </div>
           <div className="flex items-center justify-between rounded-md border border-gray-200 p-4">
             <div>
               <h3 className="text-sm font-medium text-gray-900">Location-based Rules</h3>
               <p className="text-xs text-gray-500">Define rules specific to locations</p>
             </div>
-            <button className="text-sm text-indigo-600 hover:text-indigo-500">Configure</button>
+            <button className="text-sm text-sonata-600 hover:text-sonata-500">Configure</button>
           </div>
         </div>
       </div>

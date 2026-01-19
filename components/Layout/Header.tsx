@@ -26,7 +26,7 @@ export default function Header() {
           </div>
           <button className="relative rounded-full bg-white p-1 text-slate-400 hover:text-slate-600 border border-slate-200 shadow-sm">
             <BellIcon className="h-6 w-6" />
-            <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-400 ring-2 ring-white" />
+            <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-sonata-600 ring-2 ring-white" />
           </button>
         </div>
       </div>

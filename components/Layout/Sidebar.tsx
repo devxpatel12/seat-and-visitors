@@ -43,13 +43,13 @@ export default function Sidebar() {
 
   return (
     <div className="flex h-full w-68 flex-col border-r border-slate-200 bg-white/80 backdrop-blur">
-      <div className="flex h-16 items-center gap-3 px-4 border-b border-slate-200">
-        <div className="h-10 w-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold">
-          SB
+      <div className="flex h-16 items-center gap-3 px-4 border-b border-slate-200 bg-slate-900">
+        <div className="h-10 w-10 rounded-lg bg-sonata-600 text-white flex items-center justify-center font-bold">
+          S
         </div>
         <div>
-          <p className="text-sm text-slate-500">Workplace Platform</p>
-          <h1 className="text-lg font-semibold text-slate-900">Seats & Visitors</h1>
+          <p className="text-xs text-slate-400">Sonata Software</p>
+          <h1 className="text-sm font-bold text-white">Workplace Platform</h1>
         </div>
       </div>
       <nav className="flex-1 space-y-1 px-3 py-4">
@@ -61,13 +61,13 @@ export default function Sidebar() {
               href={item.href}
               className={`group flex items-center rounded-lg px-3 py-2 text-sm font-medium transition ${
                 isActive
-                  ? 'bg-indigo-50 text-indigo-700 border border-indigo-100 shadow-sm'
+                  ? 'bg-sonata-50 text-sonata-700 border border-sonata-200 shadow-sm'
                   : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               <item.icon
                 className={`mr-3 h-6 w-6 flex-shrink-0 ${
-                  isActive ? 'text-indigo-600' : 'text-slate-400 group-hover:text-slate-500'
+                  isActive ? 'text-sonata-600' : 'text-slate-400 group-hover:text-slate-500'
                 }`}
               />
               {item.name}

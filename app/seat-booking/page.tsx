@@ -58,7 +58,7 @@ export default function SeatBooking() {
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 sm:text-sm"
+              className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-2 focus:ring-sonata-200 sm:text-sm"
             >
               <option value="">Select location</option>
               {locations.map((loc) => (
@@ -77,13 +77,13 @@ export default function SeatBooking() {
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
               min={new Date().toISOString().split('T')[0]}
-              className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 sm:text-sm"
+              className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-2 focus:ring-sonata-200 sm:text-sm"
             />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-slate-700">Duration</label>
-            <select className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 sm:text-sm">
+            <select className="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 shadow-sm focus:border-sonata-500 focus:outline-none focus:ring-2 focus:ring-sonata-200 sm:text-sm">
               <option>Full Day</option>
               <option>Half Day (Morning)</option>
               <option>Half Day (Afternoon)</option>
@@ -107,7 +107,7 @@ export default function SeatBooking() {
               onClick={() => setSelectedType(type.id)}
               className={`rounded-lg border px-4 py-4 text-left transition ${
                 selectedType === type.id
-                  ? 'border-indigo-300 bg-indigo-50 shadow-sm'
+                  ? 'border-sonata-300 bg-sonata-50 shadow-sm'
                   : 'border-slate-200 bg-white hover:border-slate-300'
               }`}
             >
@@ -144,7 +144,7 @@ export default function SeatBooking() {
                     onClick={() => setSelectedSeat(seat.code)}
                     className={`rounded-lg border-2 p-4 cursor-pointer transition-all ${
                       selectedSeat === seat.code
-                        ? 'border-indigo-500 bg-indigo-50'
+                        ? 'border-sonata-500 bg-sonata-50'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
@@ -170,7 +170,7 @@ export default function SeatBooking() {
               <div className="mt-6 flex justify-end">
                 <button
                   onClick={handleBookSeat}
-                  className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-500"
+                  className="rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-sonata-500"
                 >
                   Book Seat {selectedSeat}
                 </button>
@@ -181,9 +181,9 @@ export default function SeatBooking() {
       )}
 
       {/* Booking Rules Info */}
-      <div className="rounded-lg border border-indigo-100 bg-indigo-50 p-4">
-        <h3 className="text-sm font-semibold text-indigo-900">Booking Rules</h3>
-        <ul className="mt-2 space-y-1 text-sm text-indigo-800">
+      <div className="rounded-lg border border-sonata-100 bg-sonata-50 p-4">
+        <h3 className="text-sm font-semibold text-sonata-900">Booking Rules</h3>
+        <ul className="mt-2 space-y-1 text-sm text-sonata-800">
           <li>• Bookings may need approval based on your role/department.</li>
           <li>• Hot desks: up to 30 days in advance. Team zones: team lead approval.</li>
           <li>• Permanent seats require manager approval and HRMS validation.</li>

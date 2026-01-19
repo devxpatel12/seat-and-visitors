@@ -94,7 +94,7 @@ export default function Reports() {
           <select
             value={dateRange}
             onChange={(e) => setDateRange(e.target.value)}
-            className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+            className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-sonata-500 focus:outline-none focus:ring-sonata-500"
           >
             <option value="today">Today</option>
             <option value="last7days">Last 7 Days</option>
@@ -104,7 +104,7 @@ export default function Reports() {
           </select>
           <button
             onClick={() => handleExport('excel')}
-            className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+            className="inline-flex items-center rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
           >
             <ArrowDownTrayIcon className="mr-2 h-5 w-5" />
             Export Excel
@@ -133,7 +133,7 @@ export default function Reports() {
               onClick={() => setSelectedReport(tab.id)}
               className={`whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium ${
                 selectedReport === tab.id
-                  ? 'border-indigo-500 text-indigo-600'
+                  ? 'border-sonata-500 text-sonata-600'
                   : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
               }`}
             >
@@ -200,7 +200,7 @@ export default function Reports() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow">
               <h3 className="text-sm font-medium text-gray-500">Overall Utilization</h3>
-              <p className="mt-2 text-3xl font-bold text-indigo-600">72%</p>
+              <p className="mt-2 text-3xl font-bold text-sonata-600">72%</p>
               <p className="mt-1 text-sm text-gray-500">500 seats / 360 occupied</p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow">
