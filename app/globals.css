@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #2563eb;
+  --primary-soft: #e8eeff;
+  --border: #e2e8f0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+::selection {
+  background: #dbeafe;
+  color: #0f172a;
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900;
+  }
+
+  p, span, label {
+    @apply text-slate-700;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm;
+  }
+
+  .card-header {
+    @apply px-6 py-4 border-b border-slate-200;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
