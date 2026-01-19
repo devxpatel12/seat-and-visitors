@@ -20,14 +20,12 @@ interface VisitorInfo {
 
 export default function SecurityCheckIn() {
   const [checkInMethod, setCheckInMethod] = useState<'qr' | 'otp'>('qr')
-  const [qrCode, setQrCode] = useState('')
   const [otp, setOtp] = useState('')
   const [visitorInfo, setVisitorInfo] = useState<VisitorInfo | null>(null)
   const [blacklistCheck, setBlacklistCheck] = useState(false)
 
-  const handleQRScan = (scannedCode: string) => {
-    setQrCode(scannedCode)
-    // Mock visitor data
+  const handleQRScan = () => {
+    // Mock visitor data - QR code scanned
     setVisitorInfo({
       id: '1',
       name: 'Rajesh Kumar',
@@ -69,7 +67,6 @@ export default function SecurityCheckIn() {
       alert('Visitor checked in successfully! Badge and gate pass generated.')
       // Reset form
       setVisitorInfo(null)
-      setQrCode('')
       setOtp('')
       setBlacklistCheck(false)
     }
@@ -79,7 +76,6 @@ export default function SecurityCheckIn() {
     if (visitorInfo) {
       alert('Visitor checked out successfully!')
       setVisitorInfo(null)
-      setQrCode('')
       setOtp('')
       setBlacklistCheck(false)
     }
@@ -137,7 +133,7 @@ export default function SecurityCheckIn() {
                 </div>
               </div>
               <button
-                onClick={() => handleQRScan('MOCK_QR_CODE')}
+                onClick={() => handleQRScan()}
                 className="w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
               >
                 Simulate QR Scan

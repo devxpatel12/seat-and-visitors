@@ -36,7 +36,11 @@ export default function SeatConfiguration() {
   ])
 
   const [selectedLocation, setSelectedLocation] = useState(locations[0])
-  const [showAddForm, setShowAddForm] = useState(false)
+
+  const handleAddLocation = () => {
+    // TODO: Implement add location functionality
+    alert('Add location functionality will be implemented')
+  }
 
   return (
     <div className="space-y-6">
@@ -48,7 +52,7 @@ export default function SeatConfiguration() {
           </p>
         </div>
         <button
-          onClick={() => setShowAddForm(true)}
+          onClick={handleAddLocation}
           className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
         >
           <PlusIcon className="mr-2 h-5 w-5" />
