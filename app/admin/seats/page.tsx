@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { PlusIcon, BuildingOfficeIcon, MapPinIcon } from '@heroicons/react/24/outline'
 
 export default function SeatConfiguration() {
@@ -121,9 +122,12 @@ export default function SeatConfiguration() {
                           <span className="ml-2 text-sm text-gray-500">{zone.seats} seats</span>
                         </div>
                         <div className="flex space-x-2">
-                          <button className="text-sm text-sonata-600 hover:text-sonata-500">
+                          <Link
+                            href={`/admin/seats/floor-plan/${zone.id}`}
+                            className="text-sm text-sonata-600 hover:text-sonata-500"
+                          >
                             Configure Seats
-                          </button>
+                          </Link>
                           <button className="text-sm text-gray-600 hover:text-gray-500">
                             Edit
                           </button>

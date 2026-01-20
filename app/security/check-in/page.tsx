@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { QrCodeIcon, KeyIcon, CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline'
 
 interface VisitorInfo {
@@ -19,13 +20,17 @@ interface VisitorInfo {
 }
 
 export default function SecurityCheckIn() {
+  const router = useRouter()
   const [checkInMethod, setCheckInMethod] = useState<'qr' | 'otp'>('qr')
   const [otp, setOtp] = useState('')
   const [visitorInfo, setVisitorInfo] = useState<VisitorInfo | null>(null)
   const [blacklistCheck, setBlacklistCheck] = useState(false)
+  const [visitId, setVisitId] = useState<string | null>(null)
 
   const handleQRScan = () => {
     // Mock visitor data - QR code scanned
+    const mockVisitId = 'V-001'
+    setVisitId(mockVisitId)
     setVisitorInfo({
       id: '1',
       name: 'Rajesh Kumar',
@@ -45,6 +50,8 @@ export default function SecurityCheckIn() {
 
   const handleOTPSubmit = () => {
     // Mock OTP validation
+    const mockVisitId = 'V-001'
+    setVisitId(mockVisitId)
     setVisitorInfo({
       id: '1',
       name: 'Rajesh Kumar',
@@ -65,10 +72,13 @@ export default function SecurityCheckIn() {
   const handleCheckIn = () => {
     if (visitorInfo && !visitorInfo.blacklistFlag) {
       alert('Visitor checked in successfully! Badge and gate pass generated.')
-      // Reset form
-      setVisitorInfo(null)
-      setOtp('')
-      setBlacklistCheck(false)
+      // Keep visitor info for badge generation
+    }
+  }
+
+  const handleGenerateBadge = () => {
+    if (visitId) {
+      router.push(`/security/badge/${visitId}`)
     }
   }
 
@@ -252,6 +262,14 @@ export default function SecurityCheckIn() {
                 >
                   Check Out
                 </button>
+                {visitId && (
+                  <button
+                    onClick={handleGenerateBadge}
+                    className="flex-1 rounded-md bg-sonata-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sonata-500"
+                  >
+                    Generate Badge
+                  </button>
+                )}
               </div>
             )}
           </div>

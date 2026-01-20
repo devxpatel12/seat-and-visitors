@@ -16,6 +16,8 @@ import {
   ShieldCheckIcon,
   ArrowRightOnRectangleIcon,
   CheckCircleIcon,
+  ShieldExclamationIcon,
+  DocumentTextIcon,
 } from '@heroicons/react/24/outline'
 
 const navigation = [
@@ -28,6 +30,8 @@ const navigation = [
   { name: 'Visitor Management', href: '/visitor-management', icon: UserGroupIcon, roles: ['employee', 'manager', 'facilities', 'security', 'admin'] },
   { name: 'Pre-register Visitor', href: '/visitor-management/pre-register', icon: IdentificationIcon, roles: ['employee', 'manager'] },
   { name: 'Security Desk', href: '/security/check-in', icon: ShieldCheckIcon, roles: ['security', 'admin'] },
+  { name: 'Blacklist Management', href: '/admin/blacklist', icon: ShieldExclamationIcon, roles: ['security', 'admin'] },
+  { name: 'Visitor Audit Logs', href: '/visitor-management/audit-logs', icon: DocumentTextIcon, roles: ['security', 'facilities', 'admin'] },
   { name: 'Reports & Analytics', href: '/reports', icon: ChartBarIcon, roles: ['hr', 'facilities', 'admin'] },
   { name: 'HRMS Integration', href: '/admin/hrms', icon: Cog6ToothIcon, roles: ['hr', 'admin'] },
   { name: 'Settings', href: '/admin/settings', icon: Cog6ToothIcon, roles: ['admin'] },
@@ -54,7 +58,15 @@ export default function Sidebar() {
       </div>
       <nav className="flex-1 space-y-1 px-3 py-4">
         {filteredNavigation.map((item) => {
-          const isActive = pathname === item.href || pathname?.startsWith(item.href + '/')
+          // More precise active state matching
+          // Exact match OR direct child (one level deep), but not deeper nested paths
+          const isExactMatch = pathname === item.href
+          const isDirectChild = pathname?.startsWith(item.href + '/') && 
+            pathname.split('/').length === item.href.split('/').length + 1
+          // Special case: visitor-management should not be active for audit-logs
+          const isSpecialCase = item.href === '/visitor-management' && 
+            pathname?.startsWith('/visitor-management/audit-logs')
+          const isActive = (isExactMatch || isDirectChild) && !isSpecialCase
           return (
             <Link
               key={item.name}
